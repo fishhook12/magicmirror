@@ -150,6 +150,7 @@ function togglePlaying(){
 
 function gotData(data) {
   var articles = data.response.docs;
+  createElement('h3', "Top News");
   for(var i = 0; i < 3; i++){
     createElement('h4', articles[i].headline.main);
     createP(articles[i].snippet);
